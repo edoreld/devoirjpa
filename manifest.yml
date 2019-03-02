@@ -1,0 +1,5 @@
+applications:
+ - name: ibmcloud
+   path: target/ibmcloud.war
+   instances: 1
+   random-route: true
