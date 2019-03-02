@@ -15,7 +15,7 @@ cache:
 deploy:
   provider: bluemixcloudfoundry
   skip_cleanup: true
-  username: edoreld@gmail.com
+  username: edoreld
   password: $BLUEMIX_PASSWORD
   organization: edoreld@gmail.com
   space: dev
