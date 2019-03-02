@@ -3,6 +3,8 @@ jdk: oraclejdk8
 sudo: false
 before_install:
    mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+before_deply:
+   cf login -u $BLUEMIX_USER -o $BLUEMIX_ORG
 script:
    mvn test -B
 language: java
@@ -13,10 +15,14 @@ cache:
   directories:
   - "$HOME/.m2"
 deploy:
+  edge: true
   provider: bluemixcloudfoundry
-  skip_cleanup: true
-  username: edoreld
+  username: $BLUEMIX_USER
   password: $BLUEMIX_PASSWORD
-  organization: edoreld@gmail.com
-  space: dev
-region: eu-gb
+  organization: $BLUEMIX_ORG
+  space: $BLUEMIX_SPACE
+  manifest: manifest.yml
+  app_name: ibmcloudapp
+  region: eu-gb
+  api: https://api.eu-gb.bluemix.net
+  skip_cleanup: true
