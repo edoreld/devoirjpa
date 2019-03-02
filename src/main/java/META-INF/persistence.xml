@@ -4,6 +4,7 @@
 	<jta-data-source>java:comp/env/jdbc/mydbdatasource</jta-data-source>
 		<class>entities.Comment</class>
 		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.DB2Dialect" />
 			<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>
