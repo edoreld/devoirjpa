@@ -16,11 +16,7 @@
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
-<dependency>
-    <groupId>javax.ws.rs</groupId>
-    <artifactId>javax.ws.rs-api</artifactId>
-    <version>2.1.1</version>
-</dependency>
+
 		<dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-api</artifactId>
@@ -33,6 +29,19 @@
         <version>5.4.0</version>
         <scope>test</scope>
     </dependency>
+    <dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>eclipselink</artifactId>
+    <version>2.7.4</version>
+</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
 <!-- <dependency>
     <groupId>org.hibernate.javax.persistence</groupId>
@@ -40,11 +49,8 @@
     <version>1.0.2.Final</version>
 </dependency> -->
 <!-- https://mvnrepository.com/artifact/javax.persistence/javax.persistence-api -->
-<dependency>
-    <groupId>javax.persistence</groupId>
-    <artifactId>javax.persistence-api</artifactId>
-    <version>2.2</version>
-</dependency>		
+	
+<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
 	</dependencies>
 	<build>
 		<finalName>${project.artifactId}</finalName>
